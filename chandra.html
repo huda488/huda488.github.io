@@ -1,0 +1,277 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂 Selamat Ulang Tahun Chandra!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6, #93c5fd);
+            min-height: 100vh;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .dari-huda {
+            background: linear-gradient(135deg, #60a5fa, #bfdbfe);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1e40af;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-bottom: 25px;
+            border: 3px dashed #3b82f6;
+        }
+
+        .dari-huda:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #bfdbfe, #60a5fa);
+        }
+
+        .pesan-huda {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: #1e3a8a;
+            display: none;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            border: 2px solid #3b82f6;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 3px 3px 0 #1e40af;
+            margin-bottom: 10px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        .cake {
+            font-size: 80px;
+            margin: 20px 0;
+        }
+
+        .info {
+            background: rgba(255,255,255,0.9);
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .info h2 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+
+        .info p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .tombol-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 14px 22px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .t1 { background: #1e40af; color: white; }
+        .t2 { background: #3b82f6; color: white; }
+        .t3 { background: #60a5fa; color: white; }
+        .t4 { background: #93c5fd; color: #1e3a8a; }
+        .t5 { background: #0284c7; color: white; }
+        .t6 { background: #0ea5e9; color: white; }
+        .t7 { background: #38bdf8; color: white; }
+        .t8 { background: #7dd3fc; color: #1e3a8a; }
+        .t9 { background: #0369a1; color: white; }
+        .t10 { background: #7dd3fc; color: #1e3a8a; }
+        .t11 { background: #1d4ed8; color: white; }
+        .t12 { background: #60a5fa; color: white; }
+
+        .pesan {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            color: #1e3a8a;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .tombol-wa {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            padding: 16px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .tombol-wa:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            opacity: 0;
+            animation: confetti 5s ease-in-out infinite;
+        }
+
+        @keyframes confetti {
+            0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="dari-huda" onclick="tampilkanPesanHuda()">
+            💌 Klik Ini → Dari Huda untuk Chandra 💌
+        </div>
+
+        <div class="pesan-huda" id="pesanHuda">
+            🎉 <strong>Dari Huda untuk Chandra</strong> 🎉<br>
+            Hai Chandra! Selamat ulang tahun ya! 🎂🥳<br>
+            Semoga kamu selalu sehat, bahagia, dan sukses!<br>
+            Semoga kita selalu jadi teman yang baik!<br>
+            Semangat terus belajarnya! 💪✨<br>
+            <em>— Salam hangat, Huda 💖</em>
+        </div>
+
+        <h1>🎊 SELAMAT ULANG TAHUN CHANDRA! 🎊</h1>
+        <div class="cake">🎂🥳🎈🎉🎁</div>
+
+        <div class="info">
+            <h2>🎂 CHANDRA 🎂</h2>
+            <p>📅 Lahir: 17 Oktober 2012</p>
+            <p>🎉 Sekarang Berusia: 14 Tahun!</p>
+        </div>
+
+        <h3 style="color:white; margin-bottom:20px;">👇 Klik tombol di bawah untuk lihat ucapan! 👇</h3>
+
+        <div class="tombol-container">
+            <button class="t1" onclick="tampilkan(0)">🎂 Ucapan 1</button>
+            <button class="t2" onclick="tampilkan(1)">🎉 Ucapan 2</button>
+            <button class="t3" onclick="tampilkan(2)">🎈 Ucapan 3</button>
+            <button class="t4" onclick="tampilkan(3)">🎁 Ucapan 4</button>
+            <button class="t5" onclick="tampilkan(4)">🥳 Ucapan 5</button>
+            <button class="t6" onclick="tampilkan(5)">✨ Ucapan 6</button>
+            <button class="t7" onclick="tampilkan(6)">💖 Ucapan 7</button>
+            <button class="t8" onclick="tampilkan(7)">🌟 Ucapan 8</button>
+            <button class="t9" onclick="tampilkan(8)">🍰 Ucapan 9</button>
+            <button class="t10" onclick="tampilkan(9)">🎆 Ucapan 10</button>
+            <button class="t11" onclick="tampilkan(10)">🌈 Ucapan 11</button>
+            <button class="t12" onclick="tampilkan(11)">💐 Ucapan 12</button>
+        </div>
+
+        <div class="pesan" id="pesan">
+            👆 Klik salah satu tombol di atas ya! 😊
+        </div>
+
+        <!-- ✨ TOMBOL WHATSAPP ✨ -->
+        <a href="https://wa.me/6287760056415?text=Hai%20Huda!%20Terima%20kasih%20banyak%20ya%20atas%20ucapan%20ulang%20tahunnya.%20Sangat%20berarti%20bagiku!%20😊💖" target="_blank" class="tombol-wa">
+            💬 Kirim Ucapan Terima Kasih ke Huda
+        </a>
+
+    </div>
+
+    <script>
+        function tampilkanPesanHuda() {
+            const kotak = document.getElementById('pesanHuda');
+            if (kotak.style.display === 'block') {
+                kotak.style.display = 'none';
+            } else {
+                kotak.style.display = 'block';
+                buatConfetti();
+            }
+        }
+
+        const ucapan = [
+            "🎉 Selamat Ulang Tahun, Chandra! Semoga panjang umur, sehat selalu, dan makin pintar ya! 🎂",
+            "🎂 Selamat ulang tahun, Chandra! Semoga semua impianmu tercapai dan selalu bahagia! 🥳",
+            "🎈 HBD Chandra! Semoga makin rajin belajar, berbakti kepada orang tua, dan sukses selalu! 💪",
+            "🎁 Selamat bertambah usia, Chandra! Semoga tahun ini penuh kebahagiaan dan keberkahan untukmu! ✨",
+            "🥳 Hore! Selamat ulang tahun Chandra! Semoga makin keren, makin cerdas, dan teman yang baik! 🌟",
+            "✨ Selamat ulang tahun! Semoga hari ini seindah senyumanmu, Chandra. Sukses selalu ya! 💖",
+            "💖 Happy Birthday Chandra! Semoga selalu dilindungi Tuhan dan dikelilingi orang-orang baik! 🙏",
+            "🌟 Selamat ulang tahun, kawan! Teruslah bersinar dan jadilah orang yang berguna, Chandra! 🚀",
+            "🍰 Selamat ulang tahun ke-14, Chandra! Semoga makin dewasa dan penuh prestasi! 🎓",
+            "🎆 HBD Chandra! Semoga kebahagiaan selalu menyertaimu, hari ini dan seterusnya! 🌈",
+            "🌈 Selamat ulang tahun! Semoga masa depanmu cerah dan penuh warna, Chandra! 🎨",
+            "💐 Selamat bertambah usia Chandra! Semoga hari-harimu selalu indah dan menyenangkan! ☀️"
+        ];
+
+        function tampilkan(index) {
+            document.getElementById('pesan').innerHTML = ucapan[index];
+            buatConfetti();
+        }
+
+        function buatConfetti() {
+            const warna = ['#1e40af','#3b82f6','#60a5fa','#93c5fd','#0ea5e9','#7dd3fc'];
+            for(let i=0; i<50; i++) {
+                let confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = warna[Math.floor(Math.random() * warna.length)];
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                document.body.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 5000);
+            }
+        }
+    </script>
+</body>
+</html>
